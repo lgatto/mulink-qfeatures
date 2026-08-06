@@ -9,9 +9,8 @@ The data is from
      no. 100910 (January): 100910.
      https://doi.org/10.1016/j.mcpro.2025.100910.
 
-See the [data manual
-page](https://rformassspectrometry.github.io/MsDataHub/reference/Ai2025.html)
-for additional details and [[https://lgatto.github.io/2025-EuBIC-SCP-hackathon/][2025 EuBIC SCP hackathon vignette]].
+See the [[https://rformassspectrometry.github.io/MsDataHub/reference/Ai2025.html][data manual page]] for additional details and [[https://lgatto.github.io/2025-EuBIC-SCP-hackathon/][2025 EuBIC SCP
+hackathon vignette]].
 
 - =make-data_ai2025acms.R=: loads the DIANN output from
   =data/Ai2025_aCMs_report.tsv= (available [here]()) to create a
