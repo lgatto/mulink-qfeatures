@@ -1,0 +1,31 @@
+* QFeatures object produced in R
+
+The data is from
+
+     Ai, Lizhuo, Aleksandra Binek, Vladimir Zhemkov, Jae Hyung Cho, Ali
+     Haghani, Simion Kreimer, Edo Israely, et al. 2025. “Single Cell
+     Proteomics Reveals Specific Cellular Subtypes in Cardiomyocytes
+     Derived from Human iPSCs and Adult Hearts.” Mol. Cell. Proteomics,
+     no. 100910 (January): 100910.
+     https://doi.org/10.1016/j.mcpro.2025.100910.
+
+See the [data manual
+page](https://rformassspectrometry.github.io/MsDataHub/reference/Ai2025.html)
+for additional details and [[https://lgatto.github.io/2025-EuBIC-SCP-hackathon/][2025 EuBIC SCP hackathon vignette]].
+
+- =make-data_ai2025acms.R=: loads the DIANN output from
+  =data/Ai2025_aCMs_report.tsv= (available [here]()) to create a
+  =QFeatures= object.
+- The resulting =QFeatures= object is serialised to
+  [=data/ai2025a.rda=](data/ai2025a.rda).
+- The individual sets are also exported to csv files stored as
+  =data/[221024_Subject|precursors|peptides|proteins]...csv=,  and the main cell/sample metadata is
+  exported as [=data/ai2025a-colData.csv=](ai2025a-colData.csv).
+
+* Exported mulink data
+
+The data was generated as documented in [[https://github.com/lucas-diedrich/ms-scverse-bioconductor/][ms-scverse-bioconductor]].
+
+* License
+
+All the code in this repository is provided under GPL-3.0 license.
