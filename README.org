@@ -1,4 +1,4 @@
-* QFeatures object produced in R
+* QFeatures data produced in R
 
 The data is from
 
@@ -28,7 +28,10 @@ docker container]]:
 docker run -it --user rstudio lgatto/ai2025a R
 #+end_src
 
-* Exported mulink data
+See the [[https://bioconductor.org/help/docker/][Docker for Bioconductor]] page for more help.
+
+
+* mulink data produced in python.
 
 The data was generated as documented in [[https://github.com/lucas-diedrich/ms-scverse-bioconductor/][ms-scverse-bioconductor]].
 
