@@ -21,6 +21,13 @@ hackathon vignette]].
   =data/[221024_Subject|precursors|peptides|proteins]...csv=,  and the main cell/sample metadata is
   exported as [=data/ai2025a-colData.csv=](ai2025a-colData.csv).
 
+The required environment, script and data are also available as [[https://hub.docker.com/repository/docker/lgatto/ai2025a/general][a
+docker container]]:
+
+#+begin_src shell
+docker run -it --user rstudio lgatto/ai2025a R
+#+end_src
+
 * Exported mulink data
 
 The data was generated as documented in [[https://github.com/lucas-diedrich/ms-scverse-bioconductor/][ms-scverse-bioconductor]].
