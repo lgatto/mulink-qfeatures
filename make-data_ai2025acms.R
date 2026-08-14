@@ -4,16 +4,16 @@ suppressPackageStartupMessages({
     library(scp)
 })
 
-stopifnot(packageVersion("MsDataHub") >= "1.7.1")
+stopifnot(packageVersion("MsDataHub") >= "1.12.1")
 stopifnot(packageVersion("QFeatures") >= "1.17.2")
 
 
 #########################################################
 ## Preparing the data
 
-## ai2025aTab <- read_tsv(MsDataHub::Ai2025_aCMs_report.tsv())
 
-ai2025aTab <- read_tsv("data/Ai2025_aCMs_report.tsv")
+ai2025aTab <- read_tsv(MsDataHub::Ai2025_aCMs_report.tsv())
+
 
 tab <- tibble(File.Name = unique(ai2025aTab[[1]])) |>
     mutate(Sample = sub("^.+CM_PROJECT\\\\", "", File.Name)) |>
