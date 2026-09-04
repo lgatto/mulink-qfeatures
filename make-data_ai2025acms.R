@@ -125,3 +125,53 @@ sapply(seq_along(ai2025a),
        })
 
 write.csv(colData(ai2025a), "data/ai2025a-colData.csv")
+
+#########################################################
+## Serialise object to h5mu
+
+library(scpdata)
+
+ai <- ai2025a()
+
+source("R/io_converter.R")
+
+ai$Date <- as.character(ai$Date)
+ai[[304]]$Date <- as.character(ai[[304]]$Date)
+
+tmp <- ai[, , 302:304]
+
+## Export joined assays only
+
+writeLinkH5MU(tmp, "ai.h5mu", overwrite = TRUE)
+
+tmp2 <- readLinkH5MU("ai.h5mu")
+
+## Comparing tmp before and tmp2 after
+
+## vector names are lost in some of the colData variables
+all.equal(colData(tmp),
+          colData(tmp2),
+          check.attributes = FALSE)
+
+## The name of the first assay is lost
+all.equal(tmp[[1]], tmp2[[1]])
+all.equal(tmp[[2]], tmp2[[2]])
+
+## The name of the first assay is lost and the whole metadata slot, containing
+## the scplainer model wasn't saved. Should go into the unstructured attribute.
+all.equal(tmp[[3]], tmp2[[3]])
+
+
+## All these assays are indentical
+identical(assay(tmp[[1]], 1), assay(tmp2[[1]], 1))
+identical(assay(tmp[[1]], 2), assay(tmp2[[1]], 2))
+identical(assay(tmp[[2]], 1), assay(tmp2[[2]], 1))
+identical(assay(tmp[[2]], 2), assay(tmp2[[2]], 2))
+
+## NAs before and NaN after
+all.equal(assay(tmp[[3]], 1), assay(tmp2[[3]], 1)) ## not identical
+
+## Export all assays
+writeLinkH5MU(ai, "aifull.h5mu")
+
+ai2 <- readLinkH5MU("aifull.h5mu")
