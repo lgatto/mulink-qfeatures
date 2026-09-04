@@ -125,3 +125,21 @@ sapply(seq_along(ai2025a),
        })
 
 write.csv(colData(ai2025a), "data/ai2025a-colData.csv")
+
+#########################################################
+## Serialise object to h5mu
+
+library(scpdata)
+
+ai <- ai2025a()
+
+source("R/io_converter.R")
+
+ai$Date <- as.character(ai$Date)
+ai[[304]]$Date <- as.character(ai[[304]]$Date)
+
+tmp <- ai[, , 302:304]
+
+writeLinkH5MU(tmp, "ai.h5mu", overwrite = TRUE)
+
+readLinkH5MU("ai.h5mu")
