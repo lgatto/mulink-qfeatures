@@ -142,4 +142,21 @@ tmp <- ai[, , 302:304]
 
 writeLinkH5MU(tmp, "ai.h5mu", overwrite = TRUE)
 
-readLinkH5MU("ai.h5mu")
+tmp2 <- readLinkH5MU("ai.h5mu")
+
+all.equal(colData(tmp),
+          colData(tmp2),
+          check.attributes = FALSE)
+
+all.equal(tmp[[1]], tmp2[[1]])
+all.equal(tmp[[2]], tmp2[[2]])
+all.equal(tmp[[3]], tmp2[[3]])
+
+
+identical(assay(tmp[[1]], 1), assay(tmp2[[1]], 1))
+identical(assay(tmp[[1]], 2), assay(tmp2[[1]], 2))
+
+identical(assay(tmp[[2]], 1), assay(tmp2[[2]], 1))
+identical(assay(tmp[[2]], 2), assay(tmp2[[2]], 2))
+
+all.equal(assay(tmp[[3]], 1), assay(tmp2[[3]], 1)) ## not identical
