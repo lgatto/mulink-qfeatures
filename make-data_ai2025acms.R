@@ -173,3 +173,5 @@ all.equal(assay(tmp[[3]], 1), assay(tmp2[[3]], 1)) ## not identical
 
 ## Export all assays
 writeLinkH5MU(ai, "aifull.h5mu")
+
+ai2 <- readLinkH5MU("aifull.h5mu")
