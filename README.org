@@ -38,11 +38,10 @@ The data was generated as documented in [[https://github.com/lucas-diedrich/ms-s
 
 * R/Python on-disk representation
 
-The different `make-data_.R` scripts import data from `scpdata`,
-serialise it in `h5mu` with `writeLinkH5MU()` from
-[[https://github.com/lucas-diedrich/ms-scverse-bioconductor][ms-scverse-bioconductor]], and then reload it with `readLinkH5MU()`. The
-observed differences are collected in the scripts and associated
-issues.
+The different =make-data_.R= scripts import data from =scpdata=, serialise
+it in =h5mu= with =writeLinkH5MU()= from [[https://github.com/lucas-diedrich/ms-scverse-bioconductor][ms-scverse-bioconductor]], and then
+reload it with =readLinkH5MU()=. The observed differences are collected
+in the scripts and associated issues.
 
 To consolidate this round-trip, initiated by Lucas Diedrich
 [[https://github.com/lucas-diedrich/ms-scverse-bioconductor][ms-scverse-bioconductor]], we are porting/rewriting some of that code in
