@@ -1,4 +1,6 @@
-* QFeatures data produced in R
+* Data generation
+
+** QFeatures data produced in R
 
 The data is from
 
@@ -30,17 +32,17 @@ docker run -it --user rstudio lgatto/ai2025a R
 
 See the [[https://bioconductor.org/help/docker/][Docker for Bioconductor]] page for more help.
 
-
-* mulink data produced in python.
+** mulink data produced in python.
 
 The data was generated as documented in [[https://github.com/lucas-diedrich/ms-scverse-bioconductor/][ms-scverse-bioconductor]].
 
-* Exporting/importing h5mu
+* R/Python on-disk representation
 
 The different `make-data_.R` scripts import data from `scpdata`,
-serialise it with `writeLinkH5MU()` from [[https://github.com/lucas-diedrich/ms-scverse-bioconductor][ms-scverse-bioconductor]], and
-then reload it with `readLinkH5MU()`. The observed differences are
-collected in the scripts and associated issues.
+serialise it in `h5mu` with `writeLinkH5MU()` from
+[[https://github.com/lucas-diedrich/ms-scverse-bioconductor][ms-scverse-bioconductor]], and then reload it with `readLinkH5MU()`. The
+observed differences are collected in the scripts and associated
+issues.
 
 To consolidate this round-trip, initiated by Lucas Diedrich
 [[https://github.com/lucas-diedrich/ms-scverse-bioconductor][ms-scverse-bioconductor]], we are porting/rewriting some of that code in
