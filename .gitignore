@@ -2,3 +2,8 @@ data/ai2025a.rda
 data/Ai2025_aCMs_report.tsv
 data/Ai2025_iCMs_report.tsv
 ai2025a
+.Rproj.user
+.Rhistory
+
+# don't commit h5mu files
+*.h5mu
