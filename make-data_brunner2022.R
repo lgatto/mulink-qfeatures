@@ -7,12 +7,12 @@ scp <- brunner2022()
 
 writeLinkH5MU(
   scp,
-  "brunner2022.h5mu",
+  "data/brunner2022.h5mu",
   feature_mapping_key = "Protein.Group"
 )
 
 scp_from_h5mu <- readLinkH5MU(
-  "brunner2022.h5mu",
+  "data/brunner2022.h5mu",
   feature_mapping_key = "Protein.Group"
 )
 # Warning message:
