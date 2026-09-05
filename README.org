@@ -47,6 +47,16 @@ To consolidate this round-trip, initiated by Lucas Diedrich
 [[https://github.com/lucas-diedrich/ms-scverse-bioconductor][ms-scverse-bioconductor]], we are porting/rewriting some of that code in
 the [[https://github.com/UCLouvain-CBIO/mulinkr][mulinkr]] package.
 
+* Contributors
+
+As part of the [[https://scverse.org/sc-proteomics2026/][scverse x single-cell proteomics 2026]] hackathon
+
+- [[https://github.com/michabirklbauer][Micha Birklbauer]]
+- [[https://github.com/EnesSefaAyar][Enes Sefa Ayar]]
+- [[https://github.com/leopoldguyot][Léopold Guyot]]
+- [[https://github.com/josenimo][Jose Nimo]]
+- [[https://github.com/lgatto][Laurent Gatto]]
+
 * License
 
 All the code in this repository is provided under GPL-3.0 license.
